@@ -3,7 +3,7 @@
 $sei = $_GET['sei'];
 $mei = $_GET['mei'];
 $email = $_GET['email'];
-$content = $_GET['content'];
+$content = 
 
 // データベースに接続
 // データベースのenvファイルを持ってくる

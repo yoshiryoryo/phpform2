@@ -2,8 +2,7 @@
 // 変数を定義
 $sei = $_GET['sei'];
 $mei = $_GET['mei'];
-$email = $_GET['email'];
-$content = $_GET['content'];
+$email = $_
 
 // データベースに接続
 // データベースのenvファイルを持ってくる
