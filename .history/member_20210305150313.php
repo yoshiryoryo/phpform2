@@ -1,11 +1,5 @@
 <?php
-// セッションの開始
-session_start();
 
-$sei = htmlspecialchars($_SESSION['sei'], ENT_QUOTES, 'UTF-8');
-$mei = htmlspecialchars($_SESSION['mei'], ENT_QUOTES, 'UTF-8');
-$email = htmlspecialchars($_SESSION['email'], ENT_QUOTES, 'UTF-8');
-$content = htmlspecialchars($_SESSION['content'], ENT_QUOTES, 'UTF-8');
 
 // データベースに接続
 // データベースのenvファイルを持ってくる
