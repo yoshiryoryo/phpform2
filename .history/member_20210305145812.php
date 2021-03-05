@@ -47,7 +47,7 @@ $stmt->execute();
                     <?= $row['sei']; ?>
                 </td>
                 <td>
-                    <?= $row['mei']; ?>
+                    <?= $row['name_2']; ?>
                 </td>     
                 <td>
                     <?= $row['email']; ?>

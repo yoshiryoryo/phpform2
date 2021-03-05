@@ -1,25 +1,4 @@
-<?php
-// データベースに接続
-// データベースのenvファイルを持ってくる
-$url = parse_url(getenv('DATABASE_URL'));
 
-$dsn = sprintf('pgsql:host=%s;dbname=%s', $url['host'], substr($url['path'], 1));
-
-$pdo = new PDO($dsn, $url['user'], $url['pass']);
-// var_dump($pdo->getAttribute(PDO::ATTR_SERVER_VERSION));
-
-//  データの追加
-$sql_create = "INSERT INTO form (name_1, name_2, email) VALUES ('  $sei  ','  $mei  ','  $email  ', ' $content ')";
-$stmt = $pdo->prepare($sql_create);
-$stmt->execute();
-
-// SELECT文を変数に格納
-$sql_read = "SELECT * FROM form";
-
-// SQLステートメントを実行し、結果を変数に格納
-$stmt = $pdo->query($sql_read);
-$stmt->execute();
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -44,10 +23,10 @@ $stmt->execute();
         ?>
             <tr>
                 <td>
-                    <?= $row['sei']; ?>
+                    <?= $row['name_1']; ?>
                 </td>
                 <td>
-                    <?= $row['mei']; ?>
+                    <?= $row['name_2']; ?>
                 </td>     
                 <td>
                     <?= $row['email']; ?>

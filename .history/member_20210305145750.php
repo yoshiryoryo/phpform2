@@ -44,10 +44,10 @@ $stmt->execute();
         ?>
             <tr>
                 <td>
-                    <?= $row['sei']; ?>
+                    <?= $row['name_1']; ?>
                 </td>
                 <td>
-                    <?= $row['mei']; ?>
+                    <?= $row['name_2']; ?>
                 </td>     
                 <td>
                     <?= $row['email']; ?>
