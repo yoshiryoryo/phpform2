@@ -33,7 +33,6 @@ $stmt->execute();
 <body>
 <div>
     <h3>登録一覧</h3>
-    <table>
     <tr>
            <th>姓</th>
            <th>名</th>
@@ -59,7 +58,6 @@ $stmt->execute();
             
         <?php }
         ?>
-    </table>
     </div>
     
     <form action="index.php">

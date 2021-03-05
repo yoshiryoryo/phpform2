@@ -31,9 +31,9 @@ $stmt->execute();
     <title>Document</title>
 </head>
 <body>
-<div>
+<div class="container">
     <h3>登録一覧</h3>
-    <table>
+    <table class="table table-bordered">
     <tr>
            <th>姓</th>
            <th>名</th>
