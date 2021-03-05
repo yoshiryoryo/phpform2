@@ -9,7 +9,7 @@ $pdo = new PDO($dsn, $url['user'], $url['pass']);
 // var_dump($pdo->getAttribute(PDO::ATTR_SERVER_VERSION));
 
 //  データの追加
-$sql_create = "INSERT INTO form (sei, mei, email, content) VALUES ('  $sei  ','  $mei  ','  $email  ', ' $content ')";
+$sql_create = "INSERT INTO form (sei, mei, email) VALUES ('  $sei  ','  $mei  ','  $email  ', ' $content ')";
 $stmt = $pdo->prepare($sql_create);
 $stmt->execute();
 
