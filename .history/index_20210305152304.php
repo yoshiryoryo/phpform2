@@ -15,7 +15,7 @@ $_SESSION['token'] = $token;
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <title>入力フォーム</title>
+    <title></title>
 </head>
 <body>
     <p>* は必須項目です</p>

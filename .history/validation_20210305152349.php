@@ -37,12 +37,12 @@ if (isset($_GET)) {
 <body>
     <?php if (empty($errors)): ?>
         <h2>確認画面</h2>
-    <form action="member.php" method="get">
+    <form action="member.php" method="post">
     <div>
         <tr>
         <th>姓（セイ）:</th>
         <!--htmlタグとして機能しないようにする、クロスサイトスクリプティング対策-->
-        <td><?=htmlspecialchars($_GET['sei'])?></td>
+        <td><?=htmlspecialchars($_POST['sei'])?></td>
         </tr>
         <tr>
         <th>名（メイ）:</th>
@@ -57,10 +57,6 @@ if (isset($_GET)) {
         <!--nl2brはenterに対してbrタグを追加するためのもの-->
         <td><?=nl2br(htmlspecialchars($_GET['content']))?></td>
         </tr>
-        <input type="hidden" name="sei" value="<?= $_GET['sei']?>">
-        <input type="hidden" name="mei" value="<?= $_GET['mei']?>">
-        <input type="hidden" name="email" value="<?= $_GET['email']?>">
-        <input type="hidden" name="content" value="<?= $_GET['content']?>">
         <button type="submit" name="confirm" value="send">登録</button>
     </div>
     </form>

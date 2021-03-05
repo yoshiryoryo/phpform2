@@ -57,10 +57,7 @@ if (isset($_GET)) {
         <!--nl2brはenterに対してbrタグを追加するためのもの-->
         <td><?=nl2br(htmlspecialchars($_GET['content']))?></td>
         </tr>
-        <input type="hidden" name="sei" value="<?= $_GET['sei']?>">
-        <input type="hidden" name="mei" value="<?= $_GET['mei']?>">
-        <input type="hidden" name="email" value="<?= $_GET['email']?>">
-        <input type="hidden" name="content" value="<?= $_GET['content']?>">
+        <input type="hidden" name="mei">
         <button type="submit" name="confirm" value="send">登録</button>
     </div>
     </form>

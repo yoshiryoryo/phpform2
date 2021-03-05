@@ -1,6 +1,5 @@
 <?php
 
-
 // データベースに接続
 // データベースのenvファイルを持ってくる
 $url = parse_url(getenv('DATABASE_URL'));

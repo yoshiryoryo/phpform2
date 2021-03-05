@@ -1,4 +1,10 @@
 <?php
+// セッションの開始
+session_start();
+
+$name_1 = htmlspecialchars($_SESSION['name_1'], ENT_QUOTES, 'UTF-8');
+$name_2 = htmlspecialchars($_SESSION['name_2'], ENT_QUOTES, 'UTF-8');
+$email = htmlspecialchars($_SESSION['email'], ENT_QUOTES, 'UTF-8');
 
 
 // データベースに接続
