@@ -13,8 +13,8 @@ $_SESSION['token'] = $token;
 
 $_SESSION['sei'] = $_GET['sei'];
 $_SESSION['mei'] = $_GET['mei'];
-$_SESSION['email'] = $_GET['email'];
-$_SESSION['content'] = $_GET['content'];
+$_SESSION['eamil'] = $_GET['email'];
+$_SESSION = $_GET['content'];
 
 // エラー内容
 $errors = [];

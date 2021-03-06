@@ -12,7 +12,7 @@ $token = generateToken();
 // sessionスタートしてからの時間
 session_cache_expire(1);
 $_SESSION['token'] = $token;
-
+session_cache_expire(1);
 
 ?>
 
