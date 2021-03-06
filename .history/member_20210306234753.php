@@ -35,7 +35,7 @@ $stmt->execute();
 
 $_SESSION = [];
 
-session_destroy();
+session_destroy()
 
 ?>
 

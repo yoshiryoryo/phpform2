@@ -34,8 +34,8 @@ $stmt->execute();
 }
 
 $_SESSION = [];
+session_cache_expire(10);
 
-session_destroy();
 
 ?>
 

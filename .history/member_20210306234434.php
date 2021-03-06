@@ -32,11 +32,6 @@ $stmt->execute();
 } else {
     echo 'セッションが有効期限切れです';
 }
-
-$_SESSION = [];
-
-session_destroy();
-
 ?>
 
 <!DOCTYPE html>

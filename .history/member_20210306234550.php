@@ -33,9 +33,7 @@ $stmt->execute();
     echo 'セッションが有効期限切れです';
 }
 
-$_SESSION = [];
-
-session_destroy();
+$_SESSION
 
 ?>
 
