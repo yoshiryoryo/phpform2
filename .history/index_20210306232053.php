@@ -9,7 +9,7 @@ function generateToken()
     return bin2hex($bytes);
 }
 $token = generateToken();
-// sessionスタートしてからの時間
+//
 session_cache_expire(1);
 $_SESSION['token'] = $token;
 
