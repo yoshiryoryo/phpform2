@@ -12,6 +12,8 @@ $token = generateToken();
 $_SESSION['token'] = $token;
 
 
+
+
 ?>
 
 <!DOCTYPE html>
