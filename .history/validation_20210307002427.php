@@ -16,6 +16,8 @@ function generateToken()
     return bin2hex($bytes);
 }
 $token = generateToken();
+
+
 $_SESSION['token'] = $token;
 
 
