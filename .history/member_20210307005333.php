@@ -4,9 +4,8 @@
 // $_SESSIONを利用する際は必ずsession_startを記述
 session_start();
 
-$session_id = session_id();
-
-if(isset($_SESSION['sei'])&isset($_SESSION['mei'])&isset($_SESSION['email'])&isset($session_id)) {
+$session_id = session_id()
+if(isset($_SESSION['sei'])&isset($_SESSION['mei'])&isset($_SESSION['email'])&isset() {
 
 $sei = $_SESSION['sei'];
 $mei = $_SESSION['mei'];
