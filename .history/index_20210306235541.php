@@ -11,9 +11,6 @@ function generateToken()
 $token = generateToken();
 $_SESSION['token'] = $token;
 
-session_cache_expire(1/6);
-session_destroy();
-
 
 ?>
 

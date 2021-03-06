@@ -35,12 +35,6 @@ $stmt->execute();
 
 $_SESSION = [];
 
-if( ini_get( 'session.use_cookies' ) )
-{
-    // セッション クッキーを削除
-    $params = session_get_cookie_params();
-    setcookie( session_name(), '', time() - 3600, $params[ 'path' ] );
-}
 
 session_destroy();
 
