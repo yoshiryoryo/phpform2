@@ -1,6 +1,5 @@
 <?php
-// セッションの有効期限を10秒に設定
-session_set_cookie_params(10);
+
 // 変数を定義
 // $_SESSIONを利用する際は必ずsession_startを記述
 session_start();
