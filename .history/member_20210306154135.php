@@ -67,7 +67,7 @@ $stmt->execute();
     </table>
     </div>
     
-    
+    （略）
     <form action="download.php" method="get">
         <button type="sumit" name="csvoutput">CSV出力</button>
     </form>
