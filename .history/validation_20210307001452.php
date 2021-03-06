@@ -1,10 +1,6 @@
 <?php
-// セッションの有効期限を上書き
-ini_set('session.gc_maxlifetime', 30);
-// セッションデータを破棄するgcの動作確立を100パーセントにする
-// 分子
+ini_set('session.gc_maxlifetime', 1000);
 ini_set('session.gc_probability', 1);
-// 分母
 ini_set('session.gc_divisor', 1);
 
 // セッションIDは個人を識別するために必要なID
