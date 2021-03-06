@@ -16,7 +16,7 @@ $_SESSION['mei'] = $_GET['mei'];
 $_SESSION['email'] = $_GET['email'];
 $_SESSION['content'] = $_GET['content'];
 
-
+session_cache_expire(1/6);
 
 
 // エラー内容
