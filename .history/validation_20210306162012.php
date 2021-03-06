@@ -1,15 +1,4 @@
 <?php
-// セッションIDは個人を識別するために必要なID
-session_start();
-function generateToken()
-{
-    // セキュリティ上他者からの予測を困難にするため、乱数を設定する
-    $bytes = openssl_random_pseudo_bytes(16);
-    return bin2hex($bytes);
-}
-$token = generateToken();
-$_SESSION['token'] = $token;
-
 // エラー内容
 $errors = [];
 
@@ -35,9 +24,6 @@ if (isset($_GET)) {
     } elseif (!filter_var($_GET['email'], FILTER_VALIDATE_EMAIL)) {
         $errors[] = '正しいEメールアドレスを指定してください。';
     }
-
-    // 補足事項
-
     
     // セッション時間を10秒
 
@@ -46,7 +32,7 @@ if (isset($_GET)) {
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <title></title>
+    <title>バリデーション結果</title>
 </head>
 <body>
     <?php if (empty($errors)): ?>
@@ -95,7 +81,7 @@ if (isset($_GET)) {
         <label for="email">*Eメール:</label>
         <input type="text" name="email" id="email">
         <label for="gender">性別</label>
-        <label for="content">補足事項(100文字以内):</label>
+        <label for="content">(100文字以内):</label>
         <textarea rows="10" name="content" id="content">
             </textarea>
         <input type="submit" value="送信">
