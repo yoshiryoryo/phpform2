@@ -8,9 +8,6 @@ function generateToken()
     return bin2hex($bytes);
 }
 $token = generateToken();
-
-session_cache_expire(1/6);
-
 $_SESSION['token'] = $token;
 
 $_SESSION['sei'] = $_GET['sei'];
