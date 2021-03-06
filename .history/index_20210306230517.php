@@ -1,5 +1,4 @@
 <?php
-
 // セッションIDは個人を識別するために必要なID
 session_start();
 function generateToken()
@@ -9,9 +8,7 @@ function generateToken()
     return bin2hex($bytes);
 }
 $token = generateToken();
-session_cache_expire(1);
 $_SESSION['token'] = $token;
-
 
 
 ?>

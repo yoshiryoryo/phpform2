@@ -1,6 +1,5 @@
 <?php
-// 変数を定義
-if(isset($_SESSION['sei'])&isset($_SESSION['mei'])&isset($_SESSION['email'])) {
+// 変数を定義if()
 
 $sei = $_SESSION['sei'];
 $mei = $_SESSION['mei'];
@@ -26,10 +25,6 @@ $sql_read = "SELECT * FROM form";
 // SQLステートメントを実行し、結果を変数に格納
 $stmt = $pdo->query($sql_read);
 $stmt->execute();
-
-} else {
-    echo 'セッションが有効期限切れです';
-}
 ?>
 
 <!DOCTYPE html>

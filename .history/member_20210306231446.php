@@ -7,6 +7,7 @@ $mei = $_SESSION['mei'];
 $email = $_SESSION['email'];
 $content = $_SESSION['content'];
 
+}
 // データベースに接続
 // データベースのenvファイルを持ってくる
 $url = parse_url(getenv('DATABASE_URL'));
@@ -26,10 +27,6 @@ $sql_read = "SELECT * FROM form";
 // SQLステートメントを実行し、結果を変数に格納
 $stmt = $pdo->query($sql_read);
 $stmt->execute();
-
-} else {
-    echo 'セッションが有効期限切れです';
-}
 ?>
 
 <!DOCTYPE html>

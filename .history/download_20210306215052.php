@@ -13,7 +13,7 @@ $pdo = new PDO($dsn, $url['user'], $url['pass']);
     //SplFileObjectのインスタンスを生成
     $csvFile = new SplFileObject('member.csv', 'w');
     foreach ($stmt as $row) {
-        //csvファイルに変換して表示
+        //csvふ
         $csvFile->fputcsv($row);
     }
     //SplFileObjectのインスタンスは処理が終わったら、nullで編集ロックを解除する。

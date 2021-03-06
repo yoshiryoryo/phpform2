@@ -27,8 +27,6 @@ $sql_read = "SELECT * FROM form";
 $stmt = $pdo->query($sql_read);
 $stmt->execute();
 
-} else {
-    echo 'セッションが有効期限切れです';
 }
 ?>
 
