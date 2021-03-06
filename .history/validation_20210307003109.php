@@ -1,8 +1,9 @@
 <?php
-// セッションの有効期限を10秒に設定
-session_set_cookie_params(10);
+
 // セッションIDは個人を識別するために必要なID
-session_start();
+session_start([
+    'cookie_lifetime' => $300,
+]);
 function generateToken()
 {
     // セキュリティ上他者からの予測を困難にするため、乱数を設定する

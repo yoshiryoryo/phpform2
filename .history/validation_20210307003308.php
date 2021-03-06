@@ -1,6 +1,6 @@
 <?php
 // セッションの有効期限を10秒に設定
-session_set_cookie_params(10);
+session_set_cookie_params(60 * 5);
 // セッションIDは個人を識別するために必要なID
 session_start();
 function generateToken()
