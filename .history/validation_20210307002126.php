@@ -1,6 +1,6 @@
 <?php
 // セッションの有効期限を上書き
-ini_set('session.gc_maxlifetime', 5);
+ini_set('session.gc_maxlifetime', 30);
 // セッションデータを破棄するgcの動作確立を100パーセントにする
 // 分子
 ini_set('session.gc_probability', 1);
@@ -16,6 +16,7 @@ function generateToken()
     return bin2hex($bytes);
 }
 $token = generateToken();
+
 
 
 $_SESSION['token'] = $token;
