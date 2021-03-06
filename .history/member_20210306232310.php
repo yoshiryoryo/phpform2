@@ -1,6 +1,6 @@
 <?php
 // 変数を定義
-// $_SESSIONを利用する際は必ずsession_startを記述
+
 session_start();
 if(isset($_SESSION['sei'])&isset($_SESSION['mei'])&isset($_SESSION['email'])) {
 
