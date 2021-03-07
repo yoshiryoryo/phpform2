@@ -27,7 +27,7 @@ if (isset($session_id)) {
     // 上記の処理を行ってから、member.phpに移動
 header("Location:http://phpform2.herokuapp.com/member.php");
 } else {
-header("Location:http://phpform2.herokuapp.com/index.php");
+    echo 'セッションが有効期限切れです';
 }
 
 $_SESSION = [];

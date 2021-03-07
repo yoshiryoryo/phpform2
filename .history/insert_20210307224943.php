@@ -24,14 +24,15 @@ if (isset($session_id)) {
     $stmt = $pdo->prepare($sql_create);
     $stmt->execute();
 
-    // 上記の処理を行ってから、member.phpに移動
-header("Location:http://phpform2.herokuapp.com/member.php");
+    
 } else {
-header("Location:http://phpform2.herokuapp.com/index.php");
+    echo 'セッションが有効期限切れです';
 }
 
 $_SESSION = [];
 
 session_destroy();
 
+// 上記の処理を行ってから、member.phpに移動
+header("Location:http://phpform2.herokuapp.com/member.php");
 ?>
