@@ -47,10 +47,10 @@ $_SESSION['token'] = $token;
                         <label for="content">補足事項(100文字以内):</label>
                         <textarea rows="10" name="content" id="content"></textarea>
                     </div>
-                    <input type="submit" value="送信" class="btn btn-success btn-block">
+                    <input type="submit" value="送信">
                 </form>
                 <form action="member.php">
-                    <input type="submit" value="一覧確認" class="btn btn-success btn-block">
+                    <input type="submit" value="一覧確認">
                 </form>
             </div>
         </div>

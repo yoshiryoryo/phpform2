@@ -31,26 +31,21 @@ $_SESSION['token'] = $token;
                 <p>* は必須項目です</p>
                 <form action="validation.php" method="get">
                     <input type="hidden" value="$token">
-                    <div class="form-group">
-                        <label for="sei">*姓（セイ）:</label>
-                        <input type="text" name="sei" id="sei">
+                    <div class="form">
+                    <label for="sei">*姓（セイ）:</label>
+                    <input type="text" name="sei" id="sei">
                     </div>
-                    <div class="form-group">
-                        <label for="mei">*名（メイ）:</label>
-                        <input type="text" name="mei" id="mei">
-                    </div>
-                    <div class="form-group">
-                        <label for="email">*Eメール:</label>
-                        <input type="text" name="email" id="email">
-                    </div>
-                    <div class="form-group">
-                        <label for="content">補足事項(100文字以内):</label>
-                        <textarea rows="10" name="content" id="content"></textarea>
-                    </div>
-                    <input type="submit" value="送信" class="btn btn-success btn-block">
+                    <label for="mei">*名（メイ）:</label>
+                    <input type="text" name="mei" id="mei">
+                    <label for="email">*Eメール:</label>
+                    <input type="text" name="email" id="email">
+                    <label for="content">補足事項(100文字以内):</label>
+                    <textarea rows="10" name="content" id="content">
+            </textarea>
+                    <input type="submit" value="送信">
                 </form>
                 <form action="member.php">
-                    <input type="submit" value="一覧確認" class="btn btn-success btn-block">
+                    <input type="submit" value="一覧確認">
                 </form>
             </div>
         </div>
