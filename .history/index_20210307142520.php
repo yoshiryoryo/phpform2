@@ -66,7 +66,7 @@ $_SESSION['token'] = $token;
                     <button type="submit"  class="btn btn-success btn-block">送信</button>
                 </form>
                 <form action="member.php">
-                    <button type="submit"　class="btn btn-success btn-block">一覧確認</button>
+                    <button type="submit" value="一覧確認" class="btn btn-success btn-block">
                 </form>
             </div>
         </div>

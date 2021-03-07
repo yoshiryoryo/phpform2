@@ -28,6 +28,7 @@ $_SESSION['token'] = $token;
             background: #f3f3f3;
         }
         .container {
+            font-family: "Noto Sans JP";
             margin-top: 60px;
         }
         h1 {
@@ -38,7 +39,6 @@ $_SESSION['token'] = $token;
             margin-top: 30px;
         }
     </style>
-
 <body>
     <div class="container">
         <div class="row">
@@ -63,10 +63,10 @@ $_SESSION['token'] = $token;
                         <label for="content">補足事項(100文字以内):</label>
                         <textarea class="form-control" rows="5" name="content" id="content"></textarea>
                     </div>
-                    <button type="submit"  class="btn btn-success btn-block">送信</button>
+                    <input type="submit" value="送信" class="btn btn-success btn-block">
                 </form>
                 <form action="member.php">
-                    <button type="submit"　class="btn btn-success btn-block">一覧確認</button>
+                    <input type="submit" value="一覧確認" class="btn btn-success btn-block">
                 </form>
             </div>
         </div>
