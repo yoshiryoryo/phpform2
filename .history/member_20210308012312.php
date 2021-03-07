@@ -1,24 +1,23 @@
 <?php
-// データベースに接続
-// データベースのenvファイルを持ってくる
-$url = parse_url(getenv('DATABASE_URL'));
+    // データベースに接続
+    // データベースのenvファイルを持ってくる
+    $url = parse_url(getenv('DATABASE_URL'));
 
-$dsn = sprintf('pgsql:host=%s;dbname=%s', $url['host'], substr($url['path'], 1));
+    $dsn = sprintf('pgsql:host=%s;dbname=%s', $url['host'], substr($url['path'], 1));
 
-$pdo = new PDO($dsn, $url['user'], $url['pass']);
+    $pdo = new PDO($dsn, $url['user'], $url['pass']);
 
 
-// SELECT文を変数に格納
-$sql_read = "SELECT * FROM form";
+    // SELECT文を変数に格納
+    $sql_read = "SELECT * FROM form";
 
-// SQLステートメントを実行し、結果を変数に格納
-$stmt = $pdo->query($sql_read);
-$stmt->execute();
+    // SQLステートメントを実行し、結果を変数に格納
+    $stmt = $pdo->query($sql_read);
+    $stmt->execute();
 ?>
 
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -52,13 +51,14 @@ $stmt->execute();
     <div class="container">
         <h1>登録一覧</h1>
         <div style="display:inline-flex">
-            <form action="download.php" method="get">
-                <button type="submit" class="btn btn-primary">CSVダウンロード</button>
-            </form>
-            <form action="upload.php" method="post" enctype="multipart/form-data">
-                <input type="file" name="csvfile" size="30" />
-                <input type="submit" value="CSVアップロード" class="btn btn-danger" />
-            </form>
+        <form action="download.php" method="get">
+            <button type="submit" class="btn btn-primary">CSVダウンロード</button>
+        </form>
+        <form action="upload.php" method="post" enctype="multipart/form-data">
+  CSVファイル：<br />
+  <input type="file" name="csvfile" size="30" /><br />
+  <input type="submit" value="アップロード" />
+</form>
         </div>
         <table class="table table-bordered">
             <tr>

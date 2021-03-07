@@ -56,8 +56,8 @@ $stmt->execute();
                 <button type="submit" class="btn btn-primary">CSVダウンロード</button>
             </form>
             <form action="upload.php" method="post" enctype="multipart/form-data">
-                <input type="file" name="csvfile" size="30" />
-                <input type="submit" value="CSVアップロード" class="btn btn-danger" />
+                <input type="file" name="csvfile" size="30" /><br />
+                <input type="submit" value="CSVアップロード" />
             </form>
         </div>
         <table class="table table-bordered">
