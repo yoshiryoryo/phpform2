@@ -1,13 +1,4 @@
 <?php
-    // データベースに接続
-    // データベースのenvファイルを持ってくる
-    $url = parse_url(getenv('DATABASE_URL'));
-
-    $dsn = sprintf('pgsql:host=%s;dbname=%s', $url['host'], substr($url['path'], 1));
-
-    $pdo = new PDO($dsn, $url['user'], $url['pass']);
-
-
     // SELECT文を変数に格納
     $sql_read = "SELECT * FROM form";
 
@@ -18,6 +9,7 @@
 
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
