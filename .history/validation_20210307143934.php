@@ -123,14 +123,13 @@ if (isset($_GET)) {
             </div>
         </form>
     <?php else : ?>
-        <div class="col-xs-offset-4 col-xs-4">
+        <div></div>
         <ul class="error_list">
             <?php foreach ($errors as $msg) : ?>
                 <li><?= $msg ?>
                 </li>
             <?php endforeach; ?>
         </ul>
-        </div>
         <div class="container">
             <div class="row">
                 <div class="col-xs-offset-4 col-xs-4">
