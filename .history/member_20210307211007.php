@@ -69,11 +69,7 @@ session_destroy();
     }
 
     button {
-        margin: 30px;
-    }
-
-    .button-side {
-        display: inline-block;
+        margin-bottom: 30px;
     }
 </style>
 
@@ -81,7 +77,7 @@ session_destroy();
 <body>
     <div class="container">
         <h1>登録一覧</h1>
-        <div class="button-side">
+        <div class="button">
         <form action="download.php" method="get">
             <button type="submit" class="btn btn-info">CSV出力</button>
         </form>
