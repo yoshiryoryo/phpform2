@@ -54,9 +54,9 @@ if (isset($_GET)) {
     }
 
     // 補足事項
-    if (100 < mb_strlen($_GET['content'])) {
+    if( 100 < mb_strlen($_GET['content'])) {
         $error[] = "補足事項は100文字以内で入力してください";
-    }
+      }
 
     // セッション時間を10秒
 
@@ -99,50 +99,42 @@ if (isset($_GET)) {
 <body>
     <?php if (empty($errors)) : ?>
         <div class="container">
-            <h1>確認画面</h1>
-            <p>お問い合わせ内容はこちらで宜しいでしょうか？<br>よろしければ「送信する」ボタンを押して下さい。</p>
-            <form action="member.php" method="get">
-                <div class="row">
-                    <div class="col-xs-offset-4 col-xs-4">
-                        <div class="form-group">
-                            <tr>
-                                <th>姓（セイ）:</th>
-                                <!--htmlタグとして機能しないようにする、クロスサイトスクリプティング対策-->
-                                <td><?= htmlspecialchars($_GET['sei']) ?></td>
-                            </tr>
-                        </div>
-                        <div class="form-group">
-                            <tr>
-                                <th>名（メイ）:</th>
-                                <td><?= htmlspecialchars($_GET['mei']) ?></td>
-                            </tr>
-                        </div>
-                        <div class="form-group">
-                            <tr>
-                                <th>メールアドレス：</th>
-                                <td><?= htmlspecialchars($_GET['email']) ?></td>
-                            </tr>
-                        </div>
-                        <div class="form-group">
-                            <tr>
-                                <th>補足事項：</th>
-                                <!--nl2brはenterに対してbrタグを追加するためのもの-->
-                                <td><?= nl2br(htmlspecialchars($_GET['content'])) ?></td>
-                            </tr>
-                        </div>
-                        <button type="submit" name="confirm" value="send">登録</button>
-                    </div>
+        <h1>確認画面</h1>
+        <p>お問い合わせ内容はこちらで宜しいでしょうか？<br>よろしければ「送信する」ボタンを押して下さい。</p>
+        <form action="member.php" method="get">
+            <div class="row">
+                <div class="col-xs-offset-4 col-xs-4">
+                <tr>
+                    <th>姓（セイ）:</th>
+                    <!--htmlタグとして機能しないようにする、クロスサイトスクリプティング対策-->
+                    <td><?= htmlspecialchars($_GET['sei']) ?></td>
+                </tr>
+                <tr>
+                    <th>名（メイ）:</th>
+                    <td><?= htmlspecialchars($_GET['mei']) ?></td>
+                </tr>
+                <tr>
+                    <th>メールアドレス：</th>
+                    <td><?= htmlspecialchars($_GET['email']) ?></td>
+                </tr>
+                <tr>
+                    <th>補足事項：</th>
+                    <!--nl2brはenterに対してbrタグを追加するためのもの-->
+                    <td><?= nl2br(htmlspecialchars($_GET['content'])) ?></td>
+                </tr>
+                <button type="submit" name="confirm" value="send">登録</button>
                 </div>
-            </form>
+            </div>
+        </form>
         </div>
     <?php else : ?>
         <div class="col-xs-offset-4 col-xs-4">
-            <ul class="error_list">
-                <?php foreach ($errors as $msg) : ?>
-                    <li><?= $msg ?>
-                    </li>
-                <?php endforeach; ?>
-            </ul>
+        <ul class="error_list">
+            <?php foreach ($errors as $msg) : ?>
+                <li><?= $msg ?>
+                </li>
+            <?php endforeach; ?>
+        </ul>
         </div>
         <div class="container">
             <div class="row">
