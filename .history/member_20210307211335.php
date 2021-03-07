@@ -78,7 +78,6 @@ session_destroy();
 <body>
     <div class="container">
         <h1>登録一覧</h1>
-        <div style="display:inline-flex">
         <form action="download.php" method="get">
             <button type="submit" class="btn btn-info">CSV出力</button>
         </form>
