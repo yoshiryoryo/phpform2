@@ -70,9 +70,9 @@ session_destroy();
 
     .button-side {
         padding-top: 20px;
-        display: flex;
-        width: 30%;
-        margin: auto;
+  display: flex;
+  width: 30%;
+  margin: auto;
     }
 </style>
 
