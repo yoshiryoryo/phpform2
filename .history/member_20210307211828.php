@@ -68,9 +68,7 @@ session_destroy();
         text-align: center;
     }
 
-    button {
-        margin: 0 30px 30px 0;
-    }
+    button 
 
 </style>
 
