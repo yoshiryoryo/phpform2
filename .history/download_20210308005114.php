@@ -20,8 +20,7 @@
 // SplFileObjectのインスタンスを生成
 $csvFile = new SplFileObject('member.csv', 'w');
 
-// while文データの数がわからないときの処理に便利
-// PDOのfetchモードで 
+// データの数がわからないときの 
 while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
     $csvFile->fputcsv($row);
 }

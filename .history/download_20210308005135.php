@@ -21,7 +21,7 @@
 $csvFile = new SplFileObject('member.csv', 'w');
 
 // while文データの数がわからないときの処理に便利
-// PDOのfetchモードで 
+ 
 while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
     $csvFile->fputcsv($row);
 }

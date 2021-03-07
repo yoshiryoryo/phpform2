@@ -17,15 +17,16 @@
     // この記述がないとkey,valueに同じ値が入ってしまい、ファイルが二重になる
     $stmt->fetch(PDO::FETCH_ASSOC);
 
-// SplFileObjectのインスタンスを生成
-$csvFile = new SplFileObject('member.csv', 'w');
-
-// while文データの数がわからないときの処理に便利
-// PDOのfetchモードで 
+// 書き込みようファイルを開く
+$csvFile = fopen('member.csv', 'w');
+/SplFileObjectのインスタンスを生成
+$csvFile = new SplFileObject(‘member.csv’, ‘w’);
+// foreach ($stmt as $row) {
+//     $csvFile->fputcsv($row);
+// }
 while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
     $csvFile->fputcsv($row);
 }
 //SplFileObjectのインスタンスは処理が終わったら、nullで編集ロックを解除する。
 $csvFile = null;
-
 ?>
