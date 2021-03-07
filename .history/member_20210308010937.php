@@ -57,7 +57,6 @@
         <form action="upload.php" method="get">
             <button type="submit" class="btn btn-danger">CSVアップロード</button>
         </form>
-        </div>
         <table class="table table-bordered">
             <tr>
                 <th>姓(セイ)：</th>

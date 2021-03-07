@@ -50,14 +50,13 @@
 
     <div class="container">
         <h1>登録一覧</h1>
-        <div style="display:inline-flex">
+        
         <form action="download.php" method="get">
             <button type="submit" class="btn btn-primary">CSVダウンロード</button>
         </form>
         <form action="upload.php" method="get">
             <button type="submit" class="btn btn-danger">CSVアップロード</button>
         </form>
-        </div>
         <table class="table table-bordered">
             <tr>
                 <th>姓(セイ)：</th>
