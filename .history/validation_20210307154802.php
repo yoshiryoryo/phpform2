@@ -89,6 +89,8 @@ if (isset($_GET)) {
     .error_list {
         padding: 10px 30px;
         color: #ff2e5a;
+        font-size: 86%;
+        text-align: left;
         border: 1px solid #ff2e5a;
         border-radius: 5px;
     }
@@ -124,7 +126,7 @@ if (isset($_GET)) {
 
         <ul class="error_list">
             <?php foreach ($errors as $msg) : ?>
-                <li class="form-group"><?= $msg ?>
+                <li class=""><?= $msg ?>
                 </li>
             <?php endforeach; ?>
         </ul>
