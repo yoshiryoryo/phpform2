@@ -48,7 +48,7 @@ if (isset($_GET)) {
 
     // Eメール
     if (empty($_GET['email'])) {
-        $errors[] = '「Eメール」は必須項目です。';
+        $errors[] = '「Eメールは必須項目です。';
     } elseif (!filter_var($_GET['email'], FILTER_VALIDATE_EMAIL)) {
         $errors[] = '正しいEメールアドレスを指定してください。';
     }
