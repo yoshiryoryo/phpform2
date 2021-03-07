@@ -68,7 +68,7 @@ session_destroy();
         text-align: center;
     }
 
-    .button-side {
+    button {
         margin: 0 30px 30px 0;
     }
 
@@ -78,7 +78,7 @@ session_destroy();
 <body>
     <div class="container">
         <h1>登録一覧</h1>
-        <div class="button-side" style="display:inline-flex">
+        <div style="display:inline-flex">
         <form action="download.php" method="get">
             <button type="submit" class="btn btn-info">CSV出力</button>
         </form>
