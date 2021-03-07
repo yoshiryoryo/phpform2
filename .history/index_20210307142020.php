@@ -33,11 +33,11 @@ $_SESSION['token'] = $token;
                     <input type="hidden" value="$token">
                     <div class="form-group">
                         <label for="sei">*姓（セイ）:</label>
-                        <input type="text" class="form-control" name="sei" id="sei">
+                        <input type="text" name="sei" id="sei">
                     </div>
                     <div class="form-group">
                         <label for="mei">*名（メイ）:</label>
-                        <input type="text" class="form-control" name="mei" id="mei">
+                        <input type="text" name="mei" id="mei">
                     </div>
                     <div class="form-group">
                         <label for="email">*Eメール:</label>

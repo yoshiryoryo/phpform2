@@ -37,7 +37,7 @@ $_SESSION['token'] = $token;
                     </div>
                     <div class="form-group">
                         <label for="mei">*名（メイ）:</label>
-                        <input type="text" class="form-control" name="mei" id="mei">
+                        <input type="text" name="mei" id="mei">
                     </div>
                     <div class="form-group">
                         <label for="email">*Eメール:</label>

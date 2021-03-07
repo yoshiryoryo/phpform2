@@ -33,19 +33,19 @@ $_SESSION['token'] = $token;
                     <input type="hidden" value="$token">
                     <div class="form-group">
                         <label for="sei">*姓（セイ）:</label>
-                        <input type="text" class="form-control" name="sei" id="sei">
+                        <input type="text" name="sei" id="sei">
                     </div>
                     <div class="form-group">
                         <label for="mei">*名（メイ）:</label>
-                        <input type="text" class="form-control" name="mei" id="mei">
+                        <input type="text" name="mei" id="mei">
                     </div>
                     <div class="form-group">
                         <label for="email">*Eメール:</label>
-                        <input type="text" class="form-control" name="email" id="email">
+                        <input type="text" name="email" id="email">
                     </div>
                     <div class="form-group">
                         <label for="content">補足事項(100文字以内):</label>
-                        <textarea class="form-control" rows="5" name="content" id="content"></textarea>
+                        <textarea rows="5" name="content" id="content"></textarea>
                     </div>
                     <input type="submit" value="送信" class="btn btn-success btn-block">
                 </form>
