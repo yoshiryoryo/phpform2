@@ -50,7 +50,7 @@ if (is_uploaded_file($_FILES["csvfile"]["tmp_name"])) {
         $stmt->execute();
       }
       $dbh->commit();
-
+      
       header("Location:http://phpform2.herokuapp.com/member.php");
       exit;
       } else {
@@ -61,4 +61,4 @@ if (is_uploaded_file($_FILES["csvfile"]["tmp_name"])) {
     $err_msg = "ファイルが選択されていません。";
   }
 
-?>
+
