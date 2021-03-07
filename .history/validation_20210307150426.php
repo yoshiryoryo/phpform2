@@ -102,7 +102,8 @@ if (isset($_GET)) {
         <h1>確認画面</h1>
         <p>お問い合わせ内容はこちらで宜しいでしょうか？<br>よろしければ「送信する」ボタンを押して下さい。</p>
         <form action="member.php" method="get">
-            <div>
+            <div class="row">
+                <div class="col-xs-offset-4 col-xs-4">
                 <tr>
                     <th>姓（セイ）:</th>
                     <!--htmlタグとして機能しないようにする、クロスサイトスクリプティング対策-->
@@ -122,8 +123,10 @@ if (isset($_GET)) {
                     <td><?= nl2br(htmlspecialchars($_GET['content'])) ?></td>
                 </tr>
                 <button type="submit" name="confirm" value="send">登録</button>
+                </
             </div>
         </form>
+        </div>
     <?php else : ?>
         <div class="col-xs-offset-4 col-xs-4">
         <ul class="error_list">

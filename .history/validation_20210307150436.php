@@ -124,6 +124,7 @@ if (isset($_GET)) {
                 <button type="submit" name="confirm" value="send">登録</button>
             </div>
         </form>
+        
     <?php else : ?>
         <div class="col-xs-offset-4 col-xs-4">
         <ul class="error_list">
