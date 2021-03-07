@@ -89,6 +89,7 @@ if (isset($_GET)) {
     .error_list {
         padding: 10px 30px;
         color: #ff2e5a;
+        text-align: left;
         border: 1px solid #ff2e5a;
         border-radius: 5px;
     }
