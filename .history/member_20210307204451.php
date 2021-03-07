@@ -74,12 +74,6 @@ session_destroy();
 <body>
 <div class="container">
     <h1>登録一覧</h1>
-    <form action="download.php" method="get">
-        <button type="submit" class="btn-outline-dark">CSV出力</button>
-    </form>
-    <form action="index.php"　method="get">
-        <button type="submit" class="btn btn-outline-secondary">戻る</button>
-    </form>
     <table class="table table-bordered">
     <tr>
            <th>姓(セイ)：</th>
@@ -108,6 +102,12 @@ session_destroy();
         ?>
     </table>
        
+    <form action="download.php" method="get">
+        <button type="submit" class="">CSV出力</button>
+    </form>
+    <form action="index.php"　method="get">
+        <button type="submit" class="">戻る</button>
+    </form>
     </div>
 </body>
 </html>
