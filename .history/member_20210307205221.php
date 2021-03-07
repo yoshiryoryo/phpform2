@@ -81,7 +81,7 @@ session_destroy();
     <form action="index.php"　method="get">
         <button type="submit" class="btn btn-secondary">戻る</button>
     </form>
-    </div>
+    
     <table class="table table-bordered">
     <tr>
            <th>姓(セイ)：</th>
