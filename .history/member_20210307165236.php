@@ -72,7 +72,7 @@ session_destroy();
 
 
 <body>
-<div class="container">
+<div class="">
     <h1>登録一覧</h1>
     <table class="table table-condensed">
     <tr>
@@ -101,14 +101,15 @@ session_destroy();
         <?php }
         ?>
     </table>
-       
+    </div>
+    
+    
     <form action="download.php" method="get">
         <button type="submit">CSV出力</button>
     </form>
     <form action="index.php"　method="get">
         <button type="submit" class="">戻る</button>
     </form>
-    </div>
 </body>
 </html>
 </body>

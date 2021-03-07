@@ -101,7 +101,9 @@ session_destroy();
         <?php }
         ?>
     </table>
-       
+    </div>
+    
+    
     <form action="download.php" method="get">
         <button type="submit">CSV出力</button>
     </form>

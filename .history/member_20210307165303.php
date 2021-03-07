@@ -101,14 +101,16 @@ session_destroy();
         <?php }
         ?>
     </table>
-       
+    </div>
+    
+    
     <form action="download.php" method="get">
         <button type="submit">CSV出力</button>
     </form>
     <form action="index.php"　method="get">
         <button type="submit" class="">戻る</button>
     </form>
-    </div>
+    
 </body>
 </html>
 </body>

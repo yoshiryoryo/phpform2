@@ -53,33 +53,15 @@ session_destroy();
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <title>Document</title>
 </head>
-
-<style>
-        body {
-            background: #f3f3f3;
-        }
-        .container {
-            margin-top: 60px;
-        }
-        h1 {
-            margin-bottom: 50px;
-            text-align: center;
-        }
-        button {
-            margin-top: 30px;
-        }
-    </style>
-
-
 <body>
-<div class="container">
+<div>
     <h1>登録一覧</h1>
     <table class="table table-condensed">
     <tr>
            <th>姓：</th>
-           <th>名：</th>
-           <th>Eメール</th>
-           <th>補足事項：</th>
+           <th>名</th>
+           <th>アドレス</th>
+           <th>補足事項</th>
        </tr>
         <?php
         foreach ($stmt as $row) {
@@ -101,14 +83,15 @@ session_destroy();
         <?php }
         ?>
     </table>
-       
+    </div>
+    
+    
     <form action="download.php" method="get">
         <button type="submit">CSV出力</button>
     </form>
     <form action="index.php"　method="get">
         <button type="submit" class="">戻る</button>
     </form>
-    </div>
 </body>
 </html>
 </body>
