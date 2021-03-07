@@ -56,11 +56,11 @@ $_SESSION['token'] = $token;
                     </div>
                     <div class="form-group">
                         <label for="mei">*名(メイ):</label>
-                        <input type="text" class="form-control" name="mei" id="mei" placeholder="全角カナで入力">
+                        <input type="text" class="form-control" name="mei" id="mei">
                     </div>
                     <div class="form-group">
                         <label for="email">*Eメール：</label>
-                        <input type="text" class="form-control" name="email" id="email" placeholder="Eメールアドレス">
+                        <input type="text" class="form-control" name="email" id="email">
                     </div>
                     <div class="form-group">
                         <label for="content">補足事項(100文字以内)：</label>

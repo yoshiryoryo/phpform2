@@ -60,7 +60,7 @@ $_SESSION['token'] = $token;
                     </div>
                     <div class="form-group">
                         <label for="email">*Eメール：</label>
-                        <input type="text" class="form-control" name="email" id="email" placeholder="Eメールアドレス">
+                        <input type="text" class="form-control" name="email" id="email" placeholder="全角カナで入力">
                     </div>
                     <div class="form-group">
                         <label for="content">補足事項(100文字以内)：</label>
