@@ -102,24 +102,24 @@ if (isset($_GET)) {
                     <h1>確認画面</h1>
                     <form action="member.php" method="get">
                         <table class="table table-bordered">
-                            <tr>
-                                <th>姓（セイ）:</th>
-                                <!--htmlタグとして機能しないようにする、クロスサイトスクリプティング対策-->
-                                <td><?= htmlspecialchars($_GET['sei']) ?></td>
-                            </tr>
-                            <tr>
-                                <th>名（メイ）:</th>
-                                <td><?= htmlspecialchars($_GET['mei']) ?></td>
-                            </tr>
-                            <tr>
-                                <th>Eメール：</th>
-                                <td><?= htmlspecialchars($_GET['email']) ?></td>
-                            </tr>
-                            <tr>
-                                <th>補足事項：</th>
-                                <!--nl2brはenterに対してbrタグを追加するためのもの-->
-                                <td><?= nl2br(htmlspecialchars($_GET['content'])) ?></td>
-                            </tr>
+                        <tr>
+                            <th>姓（セイ）:</th>
+                            <!--htmlタグとして機能しないようにする、クロスサイトスクリプティング対策-->
+                            <td><?= htmlspecialchars($_GET['sei']) ?></td>
+                        </tr>
+                        <tr>
+                            <th>名（メイ）:</th>
+                            <td><?= htmlspecialchars($_GET['mei']) ?></td>
+                        </tr>
+                        <tr>
+                            <th>Eメール：</th>
+                            <td><?= htmlspecialchars($_GET['email']) ?></td>
+                        </tr>
+                        <tr>
+                            <th>補足事項：</th>
+                            <!--nl2brはenterに対してbrタグを追加するためのもの-->
+                            <td><?= nl2br(htmlspecialchars($_GET['content'])) ?></td>
+                        </tr>
                         </table>
                         <button type="submit" class="btn btn-success btn-block">登録</button>
                     </form>
@@ -169,10 +169,9 @@ if (isset($_GET)) {
     <?php endif; ?>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
-
 </html>
 </body>
 
