@@ -161,7 +161,7 @@ if (isset($_GET)) {
                         <button type="submit" class="btn btn-success btn-block">送信</button>
                     </form>
                     <form action="member.php">
-                        <button type="submit" class="btn btn-default">一覧確認</button>
+                        <button type="submit" 　class="btn btn-default">一覧確認</button>
                     </form>
                 </div>
             </div>
