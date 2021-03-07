@@ -112,7 +112,7 @@ if (isset($_GET)) {
                             <td><?= htmlspecialchars($_GET['mei']) ?></td>
                         </tr>
                         <tr>
-                            <th>Eメール：</th>
+                            <th>：</th>
                             <td><?= htmlspecialchars($_GET['email']) ?></td>
                         </tr>
                         <tr>

@@ -48,11 +48,11 @@ $_SESSION['token'] = $token;
                 <form action="validation.php" method="get">
                     <input type="hidden" value="$token">
                     <div class="form-group">
-                        <label for="sei">*姓(セイ):</label>
+                        <label for="sei">*姓(セイ:</label>
                         <input type="text" class="form-control" name="sei" id="sei">
                     </div>
                     <div class="form-group">
-                        <label for="mei">*名(メイ):</label>
+                        <label for="mei">*名（メイ）:</label>
                         <input type="text" class="form-control" name="mei" id="mei">
                     </div>
                     <div class="form-group">
@@ -60,7 +60,7 @@ $_SESSION['token'] = $token;
                         <input type="text" class="form-control" name="email" id="email">
                     </div>
                     <div class="form-group">
-                        <label for="content">補足事項(100文字以内)：</label>
+                        <label for="content">補足事項（100文字以内）：</label>
                         <textarea class="form-control" cols="20" rows="5" name="content" id="content" maxlength="100"></textarea>
                     </div>
                     <button type="submit"  class="btn btn-success btn-block">送信</button>

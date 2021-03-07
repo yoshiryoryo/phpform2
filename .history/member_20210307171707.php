@@ -76,9 +76,9 @@ session_destroy();
     <h1>登録一覧</h1>
     <table class="table table-bordered">
     <tr>
-           <th>姓(セイ)：</th>
-           <th>名(セイ)：</th>
-           <th>Eメール：</th>
+           <th>姓()セイ：</th>
+           <th>名：</th>
+           <th>Eメール</th>
            <th>補足事項：</th>
        </tr>
         <?php

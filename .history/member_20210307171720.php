@@ -77,8 +77,8 @@ session_destroy();
     <table class="table table-bordered">
     <tr>
            <th>姓(セイ)：</th>
-           <th>名(セイ)：</th>
-           <th>Eメール：</th>
+           <th>名()：</th>
+           <th>Eメール</th>
            <th>補足事項：</th>
        </tr>
         <?php
