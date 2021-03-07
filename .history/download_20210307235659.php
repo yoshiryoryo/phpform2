@@ -14,7 +14,7 @@
     // SQLステートメントを実行し、結果を変数に格納
     $stmt = $pdo->query($sql_read);
     $stmt->execute();
-
+    
 //SplFileObjectのインスタンスを生成
 $csvFile = new SplFileObject('member.csv', 'w');
 foreach ($stmt as $row) {
@@ -32,7 +32,3 @@ header('Content-Type: application/octet-stream');
 header('Content-Length: ' . filesize($filepath));
 // ダイアログを表示させる
 header('Content-Disposition: attachment; filename=member.csv');
-
-// ファイル出力
-readfile($filepath);
-?>
