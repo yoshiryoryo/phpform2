@@ -79,10 +79,10 @@ session_destroy();
         <h1>登録一覧</h1>
 
         <form action="download.php" method="get">
-            <button type="submit" class="btn-info">CSV出力</button>
+            <button type="submit" class="">CSV出力</button>
         </form>
         <form action="index.php" 　method="get">
-            <button type="submit" class="btn btn-default">戻る</button>
+            <button type="submit" class="btn btn-secondary">戻る</button>
         </form>
 
         <table class="table table-bordered">
