@@ -32,5 +32,5 @@ $_SESSION = [];
 session_destroy();
 
 // 上記の処理を行ってから、member.phpに移動
-header("Location:http://phpform2.herokuapp.com/member.php");
+header("Location:http://phpform2.herokuapp.com/member.php?");
 ?>
