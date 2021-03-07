@@ -78,42 +78,44 @@ session_destroy();
     <div class="container">
         <h1>登録一覧</h1>
         <div class="button-side" style="display:inline-flex">
-            <form action="download.php" method="get">
-                <button type="submit" class="btn btn-info">CSV出力</button>
-            </form>
-            <form action="index.php" 　method="get">
-                <button type="submit" class="btn btn-default">戻る</button>
-            </form>
-        </div>
-        <table class="table table-bordered">
-            <tr>
-                <th>姓(セイ)：</th>
-                <th>名(セイ)：</th>
-                <th>Eメール：</th>
-                <th>補足事項：</th>
-            </tr>
-            <?php
-            foreach ($stmt as $row) {
-            ?>
+            <div class="download-button">
+                <form action="download.php" method="get">
+                    <button type="submit" class="btn btn-info">CSV出力</button>
+                </form>
+
+                <form action="index.php" 　method="get">
+                    <button type="submit" class="btn btn-default">戻る</button>
+                </form>
+            </div>
+            <table class="table table-bordered">
                 <tr>
-                    <td>
-                        <?= $row['sei']; ?>
-                    </td>
-                    <td>
-                        <?= $row['mei']; ?>
-                    </td>
-                    <td>
-                        <?= $row['email']; ?>
-                    </td>
-                    <td>
-                        <?= $row['content']; ?>
-                    </td>
-
-                <?php }
+                    <th>姓(セイ)：</th>
+                    <th>名(セイ)：</th>
+                    <th>Eメール：</th>
+                    <th>補足事項：</th>
+                </tr>
+                <?php
+                foreach ($stmt as $row) {
                 ?>
-        </table>
+                    <tr>
+                        <td>
+                            <?= $row['sei']; ?>
+                        </td>
+                        <td>
+                            <?= $row['mei']; ?>
+                        </td>
+                        <td>
+                            <?= $row['email']; ?>
+                        </td>
+                        <td>
+                            <?= $row['content']; ?>
+                        </td>
 
-    </div>
+                    <?php }
+                    ?>
+            </table>
+
+        </div>
 
 
 </body>

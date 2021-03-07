@@ -69,8 +69,9 @@ session_destroy();
     }
 
     .button-side {
-        padding: 30px;
+        margin: 30px;
     }
+
 </style>
 
 
@@ -78,12 +79,13 @@ session_destroy();
     <div class="container">
         <h1>登録一覧</h1>
         <div class="button-side" style="display:inline-flex">
-            <form action="download.php" method="get">
-                <button type="submit" class="btn btn-info">CSV出力</button>
-            </form>
-            <form action="index.php" 　method="get">
-                <button type="submit" class="btn btn-default">戻る</button>
-            </form>
+        <div class="download-button">
+        <form action="download.php" method="get">
+            <button type="submit" class="btn btn-info">CSV出力</button>
+        </form>
+        <form action="index.php" 　method="get">
+            <button type="submit" class="btn btn-default">戻る</button>
+        </form>
         </div>
         <table class="table table-bordered">
             <tr>
@@ -115,7 +117,7 @@ session_destroy();
 
     </div>
 
-
+    
 </body>
 
 </html>
