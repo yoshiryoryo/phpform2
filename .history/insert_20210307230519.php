@@ -29,7 +29,6 @@ header("Location:http://phpform2.herokuapp.com/member.php");
 exit;
 } else {
 header("Location:http://phpform2.herokuapp.com/index.php");
-exit;
 }
 
 $_SESSION = [];
