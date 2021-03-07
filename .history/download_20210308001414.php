@@ -18,14 +18,13 @@
 // 書き込みようファイルを開く
 $csvFile = fopen('member.csv', 'w');
 // 正常にファイルが開かれたら書き込み
-if($csvFile) {
+if ($csvFile) {
     foreach ($stmt as $row) {
-        // fputcsv関数でファイルに書き込み
-        fputcsv($csvFile, $row);
+        //csvファイルに変換して表示
+        $csvFile->fputcsv($row);
     }
 }
-
-fclose($csvFile);
+ fclose($csv)
 
 // ダウンロードするサーバのファイルパス
 $filepath = 'member.csv';

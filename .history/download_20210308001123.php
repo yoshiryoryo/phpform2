@@ -15,17 +15,12 @@
     $stmt = $pdo->query($sql_read);
     $stmt->execute();
 
-// 書き込みようファイルを開く
+//SplFileObjectのインスタンスを生成
 $csvFile = fopen('member.csv', 'w');
-// 正常にファイルが開かれたら書き込み
-if($csvFile) {
-    foreach ($stmt as $row) {
-        // fputcsv関数でファイルに書き込み
-        fputcsv($csvFile, $row);
-    }
+foreach ($stmt as $row) {
+    //csvファイルに変換して表示
+    $csvFile->fputcsv($row);
 }
-
-fclose($csvFile);
 
 // ダウンロードするサーバのファイルパス
 $filepath = 'member.csv';

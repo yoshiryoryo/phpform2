@@ -21,7 +21,7 @@ $csvFile = fopen('member.csv', 'w');
 if($csvFile) {
     foreach ($stmt as $row) {
         // fputcsv関数でファイルに書き込み
-        fputcsv($csvFile, $row);
+        fputcsv($csvFile, $row)
     }
 }
 
