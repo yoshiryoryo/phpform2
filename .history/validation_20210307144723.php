@@ -48,14 +48,14 @@ if (isset($_GET)) {
 
     // Eメール
     if (empty($_GET['email'])) {
-        $errors[] = '「メールアドレス」は必須項目です。';
+        $errors[] = 'Eメールは必須項目です。';
     } elseif (!filter_var($_GET['email'], FILTER_VALIDATE_EMAIL)) {
-        $errors[] = '正しいメールアドレスを指定してください。';
+        $errors[] = '正しいEメールアドレスを指定してください。';
     }
 
     // 補足事項
     if( 100 < mb_strlen($_GET['content'])) {
-        $error[] = "補足事項は100文字以内で入力してください";
+        $error[] = "";
       }
 
     // セッション時間を10秒
