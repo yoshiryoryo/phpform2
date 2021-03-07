@@ -70,7 +70,6 @@ session_destroy();
 
     button {
         margin: 30px;
-        display:inline-block;
     }
 </style>
 

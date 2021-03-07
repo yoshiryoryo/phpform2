@@ -69,8 +69,7 @@ session_destroy();
     }
 
     button {
-        margin: 30px;
-        display:inline-block;
+        margin-top: 30px;
     }
 </style>
 
