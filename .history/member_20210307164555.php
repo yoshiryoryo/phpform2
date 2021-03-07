@@ -50,13 +50,12 @@ session_destroy();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <title>Document</title>
 </head>
 <body>
 <div>
     <h3>登録一覧</h3>
-    <table class="table table-condensed">
+    <table class="">
     <tr>
            <th>姓</th>
            <th>名</th>
@@ -87,10 +86,10 @@ session_destroy();
     
     
     <form action="download.php" method="get">
-        <button type="submit">CSV出力</button>
+        <input type="submit" value="CSV出力">
     </form>
     <form action="index.php"　method="get">
-        <button type="submit" class="">戻る</button>
+        <input type="submit" value="戻る">
     </form>
 </body>
 </html>
