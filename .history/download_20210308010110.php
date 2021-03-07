@@ -22,8 +22,8 @@ $csvFile = new SplFileObject('member.csv', 'w');
 while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
     $csvFile->fputcsv($row);
 }
-// SplFileObjectのインスタンスは処理が終わったら、nullで編集ロックを解除
-// 毎回解除しないと次に使用できない
+//SplFileObjectのインスタンスは処理が終わったら、nullで編集ロックを解除
+
 $csvFile = null;
 
 // ダウンロードするサーバのファイルパス

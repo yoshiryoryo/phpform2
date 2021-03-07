@@ -7,6 +7,7 @@ $dsn = sprintf('pgsql:host=%s;dbname=%s', $url['host'], substr($url['path'], 1))
 
 $pdo = new PDO($dsn, $url['user'], $url['pass']);
 
+
 // SELECT文を変数に格納
 $sql_read = "SELECT * FROM form";
 
@@ -22,9 +23,9 @@ $csvFile = new SplFileObject('member.csv', 'w');
 while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
     $csvFile->fputcsv($row);
 }
-// SplFileObjectのインスタンスは処理が終わったら、nullで編集ロックを解除
-// 毎回解除しないと次に使用できない
+//SplFileObjectのインスタンスは処理が終わったら、nullで編集ロックを解除する。
 $csvFile = null;
+fclose($csvFile);
 
 // ダウンロードするサーバのファイルパス
 $filepath = 'member.csv';
