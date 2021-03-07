@@ -1,10 +1,21 @@
 <?php
+
+
+
     // SELECT文を変数に格納
     $sql_read = "SELECT * FROM form";
 
     // SQLステートメントを実行し、結果を変数に格納
     $stmt = $pdo->query($sql_read);
     $stmt->execute();
+} else {
+    echo 'セッションが有効期限切れです';
+}
+
+$_SESSION = [];
+
+session_destroy();
+
 ?>
 
 <!DOCTYPE html>

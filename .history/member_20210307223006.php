@@ -5,6 +5,8 @@
     // SQLステートメントを実行し、結果を変数に格納
     $stmt = $pdo->query($sql_read);
     $stmt->execute();
+
+
 ?>
 
 <!DOCTYPE html>
