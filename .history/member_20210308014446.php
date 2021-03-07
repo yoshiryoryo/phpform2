@@ -51,13 +51,14 @@ $stmt->execute();
 
     <div class="container">
         <h1>登録一覧</h1>
-        
+        <div style="display:inline-flex">
             <form action="download.php" method="get">
                 <button type="submit" class="btn btn-primary">CSVダウンロード</button>
             </form>
             <form action="upload.php" method="post" enctype="multipart/form-data">
                 <input type="file" name="csvfile" size="30" /><input type="submit" value="CSVアップロード" class="btn btn-danger" />
             </form>
+        </div>
         <table class="table table-bordered">
             <tr>
                 <th>姓(セイ)：</th>

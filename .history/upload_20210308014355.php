@@ -23,7 +23,7 @@ if (is_uploaded_file($_FILES["csvfile"]["tmp_name"])) {
         //ファイルの削除
         unlink('../../data/uploaded/'.$file_name);
 
-    // データベースに接続
+        // データベースに接続
     // データベースのenvファイルを持ってくる
     $url = parse_url(getenv('DATABASE_URL'));
 
@@ -34,22 +34,9 @@ if (is_uploaded_file($_FILES["csvfile"]["tmp_name"])) {
     
 
     //  データの追加
-      $sql_create = "INSERT INTO form (sei, mei, email, content) VALUES (:sei , :mei , :email , :content)";
-      $stmt = $pdo->prepare($sql_create);
-      $stmt->bindParam(':sei', $sei, PDO::PARAM_STR);
-      $stmt->bindParam(':mei', $mei, PDO::PARAM_STR);
-      $stmt->bindParam(':email', $email, PDO::PARAM_STR);
-      $stmt->bindParam(':content', $content, PDO::PARAM_STR);
-      $dbh->beginTransaction();
-      foreach ($csvData as $row) {
-        $sei   = $row['sei'];
-        $mei = $row['mei'];
-        $email = $row['email'];
-        $content = $row['content'];
-        //ループのたびにsqlを実行する。
-        $stmt->execute();
-      }
-      $dbh->commit();
+    $sql_create = "INSERT INTO form (sei, mei, email, content) VALUES ('  $sei  ','  $mei  ','  $email  ',' $content ')";
+    $stmt = $pdo->prepare($sql_create);
+    $stmt->execute();
 
       } else {
         $err_msg = "ファイルをアップロードできません。";

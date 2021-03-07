@@ -38,14 +38,14 @@ if (is_uploaded_file($_FILES["csvfile"]["tmp_name"])) {
       $stmt = $pdo->prepare($sql_create);
       $stmt->bindParam(':sei', $sei, PDO::PARAM_STR);
       $stmt->bindParam(':mei', $mei, PDO::PARAM_STR);
-      $stmt->bindParam(':email', $email, PDO::PARAM_STR);
-      $stmt->bindParam(':content', $content, PDO::PARAM_STR);
+      $stmt->bindParam(':email’, $email, PDO::PARAM_STR);
+      $stmt->bindParam(‘:content’, $content, PDO::PARAM_STR);
       $dbh->beginTransaction();
       foreach ($csvData as $row) {
-        $sei   = $row['sei'];
-        $mei = $row['mei'];
-        $email = $row['email'];
-        $content = $row['content'];
+        $sei   = $row[‘sei’];
+        $mei = $row[‘mei’];
+        $email = $row[‘email’];
+        $content = $row[‘content’];
         //ループのたびにsqlを実行する。
         $stmt->execute();
       }

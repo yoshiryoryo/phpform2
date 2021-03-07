@@ -45,7 +45,7 @@ if (is_uploaded_file($_FILES["csvfile"]["tmp_name"])) {
         $sei   = $row['sei'];
         $mei = $row['mei'];
         $email = $row['email'];
-        $content = $row['content'];
+        $content = $row['content’];
         //ループのたびにsqlを実行する。
         $stmt->execute();
       }
