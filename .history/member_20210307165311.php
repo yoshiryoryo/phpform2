@@ -68,13 +68,13 @@ session_destroy();
         button {
             margin-top: 30px;
         }
-</style>
+    </style>
 
 
 <body>
 <div class="container">
     <h1>登録一覧</h1>
-    <table class="table table-bordered">
+    <table class="table table-condensed">
     <tr>
            <th>姓：</th>
            <th>名：</th>

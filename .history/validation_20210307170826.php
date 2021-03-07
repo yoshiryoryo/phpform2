@@ -121,7 +121,7 @@ if (isset($_GET)) {
                             <td><?= nl2br(htmlspecialchars($_GET['content'])) ?></td>
                         </tr>
                         </table>
-                        <button type="submit" class="btn btn-success btn-block">登録</button>
+                        <button type="submit" name="confirm" value="send">登録</button>
                     </form>
                 </div>
             </div>

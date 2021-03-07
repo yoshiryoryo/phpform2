@@ -96,44 +96,39 @@ if (isset($_GET)) {
 
 <body>
     <?php if (empty($errors)) : ?>
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-offset-4 col-xs-4">
-                    <h1>確認画面</h1>
-                    <form action="member.php" method="get">
-                        <table class="table table-bordered">
-                        <tr>
-                            <th>姓（セイ）:</th>
-                            <!--htmlタグとして機能しないようにする、クロスサイトスクリプティング対策-->
-                            <td><?= htmlspecialchars($_GET['sei']) ?></td>
-                        </tr>
-                        <tr>
-                            <th>名（メイ）:</th>
-                            <td><?= htmlspecialchars($_GET['mei']) ?></td>
-                        </tr>
-                        <tr>
-                            <th>メールアドレス：</th>
-                            <td><?= htmlspecialchars($_GET['email']) ?></td>
-                        </tr>
-                        <tr>
-                            <th>補足事項：</th>
-                            <!--nl2brはenterに対してbrタグを追加するためのもの-->
-                            <td><?= nl2br(htmlspecialchars($_GET['content'])) ?></td>
-                        </tr>
-                        </table>
-                        <button type="submit" class="btn btn-success btn-block">登録</button>
-                    </form>
-                </div>
+        
+        <h1>確認画面</h1>
+        <form action="member.php" method="get">
+            <div class="container">
+                <tr>
+                    <th>姓（セイ）:</th>
+                    <!--htmlタグとして機能しないようにする、クロスサイトスクリプティング対策-->
+                    <td><?= htmlspecialchars($_GET['sei']) ?></td>
+                </tr>
+                <tr>
+                    <th>名（メイ）:</th>
+                    <td><?= htmlspecialchars($_GET['mei']) ?></td>
+                </tr>
+                <tr>
+                    <th>メールアドレス：</th>
+                    <td><?= htmlspecialchars($_GET['email']) ?></td>
+                </tr>
+                <tr>
+                    <th>補足事項：</th>
+                    <!--nl2brはenterに対してbrタグを追加するためのもの-->
+                    <td><?= nl2br(htmlspecialchars($_GET['content'])) ?></td>
+                </tr>
+                <button type="submit" name="confirm" value="send">登録</button>
             </div>
-        </div>
+        </form>
     <?php else : ?>
         <div class="col-xs-offset-4 col-xs-4">
-            <ul class="error_list">
-                <?php foreach ($errors as $msg) : ?>
-                    <li><?= $msg ?>
-                    </li>
-                <?php endforeach; ?>
-            </ul>
+        <ul class="error_list">
+            <?php foreach ($errors as $msg) : ?>
+                <li><?= $msg ?>
+                </li>
+            <?php endforeach; ?>
+        </ul>
         </div>
         <div class="container">
             <div class="row">
