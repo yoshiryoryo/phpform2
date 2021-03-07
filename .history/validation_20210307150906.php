@@ -1,6 +1,6 @@
 <?php
 // セッションの有効期限を上書き
-ini_set('session.gc_maxlifetime', 10);
+ini_set('session.gc_maxlifetime', 60);
 // セッションデータを破棄するgcの動作確立を100パーセントにする
 // 分子
 ini_set('session.gc_probability', 1);
@@ -50,7 +50,7 @@ if (isset($_GET)) {
     if (empty($_GET['email'])) {
         $errors[] = '「メールアドレス」は必須項目です。';
     } elseif (!filter_var($_GET['email'], FILTER_VALIDATE_EMAIL)) {
-        $errors[] = '正しいEメールアドレスを指定してください。';
+        $errors[] = '正しいメールアドレスを指定してください。';
     }
 
     // 補足事項
@@ -99,6 +99,7 @@ if (isset($_GET)) {
 <body>
     <?php if (empty($errors)) : ?>
         <h1>確認画面</h1>
+
         <form action="member.php" method="get">
             <div>
                 <tr>
