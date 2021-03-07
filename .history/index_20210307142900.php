@@ -61,7 +61,7 @@ $_SESSION['token'] = $token;
                     </div>
                     <div class="form-group">
                         <label for="content">補足事項(100文字以内):</label>
-                        <textarea class="form-control" rows="5" name="content" id="content" maxlength="100"></textarea>
+                        <textarea class="form-control" rows="5" name="content" id="content" ></textarea>
                     </div>
                     <button type="submit"  class="btn btn-success btn-block">送信</button>
                 </form>
