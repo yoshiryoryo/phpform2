@@ -14,7 +14,7 @@
     // SQLステートメントを実行し、結果を変数に格納
     $stmt = $pdo->query($sql_read);
     $stmt->execute();
-    $stmt->fetch(PDO::FETCH_ASSOC);
+    $stmt->fetch(PDO::)
 
 // 書き込みようファイルを開く
 $csvFile = fopen('member.csv', 'w');
