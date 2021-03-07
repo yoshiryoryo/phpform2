@@ -99,6 +99,7 @@ if (isset($_GET)) {
 <body>
     <?php if (empty($errors)) : ?>
         <h1>確認画面</h1>
+        
         <form action="member.php" method="get">
             <div>
                 <tr>

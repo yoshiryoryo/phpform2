@@ -99,6 +99,7 @@ if (isset($_GET)) {
 <body>
     <?php if (empty($errors)) : ?>
         <h1>確認画面</h1>
+        <p>お問い合わせ内容はこちらで宜しいでしょうか？<br>よろしければ「送信する」ボタンを押して下さい。</p>
         <form action="member.php" method="get">
             <div>
                 <tr>
