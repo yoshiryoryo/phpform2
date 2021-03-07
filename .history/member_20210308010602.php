@@ -51,10 +51,10 @@
     <div class="container">
         <h1>登録一覧</h1>
         <form action="download.php" method="get">
-            <button type="submit" class="btn btn-primary">CSVダウンロード</button>
+            <button type="submit" class="btn btn-info">CSVダウンロード</button>
         </form>
         <form action="upload.php" method="get">
-            <button type="submit" class="btn btn-danger">CSVアップロード</button>
+            <button type="submit" class="btn btn-info"></button>
         </form>
         <table class="table table-bordered">
             <tr>
