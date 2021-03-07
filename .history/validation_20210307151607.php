@@ -99,6 +99,7 @@ if (isset($_GET)) {
             <div class="row">
                 <div class="col-xs-offset-4 col-xs-4">
                     <h1>確認画面</h1>
+
                     <form action="member.php" method="get">
                         <div class="form-group">
                             <tr>
@@ -119,15 +120,13 @@ if (isset($_GET)) {
                                 <td><?= htmlspecialchars($_GET['email']) ?></td>
                             </tr>
                         </div>
-                        <div class="form-group">
                             <tr>
                                 <th>補足事項：</th>
                                 <!--nl2brはenterに対してbrタグを追加するためのもの-->
                                 <td><?= nl2br(htmlspecialchars($_GET['content'])) ?></td>
                             </tr>
+                            <button type="submit" name="confirm" value="send">登録</button>
                         </div>
-                            <button type="submit" name="confirm" class="btn btn-success btn-block">登録</button>
-                        
                     </form>
                 </div>
             </div>

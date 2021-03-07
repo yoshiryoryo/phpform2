@@ -125,8 +125,8 @@ if (isset($_GET)) {
                                 <!--nl2brはenterに対してbrタグを追加するためのもの-->
                                 <td><?= nl2br(htmlspecialchars($_GET['content'])) ?></td>
                             </tr>
-                        </div>
-                            <button type="submit" name="confirm" class="btn btn-success btn-block">登録</button>
+                        </div>]
+                            <button type="submit" name="confirm" value="send">登録</button>
                         
                     </form>
                 </div>
