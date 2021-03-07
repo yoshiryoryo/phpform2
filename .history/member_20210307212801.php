@@ -68,8 +68,8 @@ session_destroy();
         text-align: center;
     }
 
-    .download-button {
-        margin-left: 30px;
+    .button-side {
+        margin: 30px;
     }
 
 </style>

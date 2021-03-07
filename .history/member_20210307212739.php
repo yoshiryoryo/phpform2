@@ -68,8 +68,8 @@ session_destroy();
         text-align: center;
     }
 
-    .download-button {
-        margin-left: 30px;
+    .button-side {
+        margin: 30px;
     }
 
 </style>
@@ -79,11 +79,10 @@ session_destroy();
     <div class="container">
         <h1>登録一覧</h1>
         <div class="button-side" style="display:inline-flex">
-        <div class="download-button">
+        <div ></div>
         <form action="download.php" method="get">
             <button type="submit" class="btn btn-info">CSV出力</button>
         </form>
-        </div>
         <form action="index.php" 　method="get">
             <button type="submit" class="btn btn-default">戻る</button>
         </form>

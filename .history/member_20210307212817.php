@@ -68,7 +68,7 @@ session_destroy();
         text-align: center;
     }
 
-    .download-button {
+    .button-side {
         margin-left: 30px;
     }
 

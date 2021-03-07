@@ -68,7 +68,7 @@ session_destroy();
         text-align: center;
     }
 
-    .download-button {
+    <div class="download-button"></div> {
         margin-left: 30px;
     }
 
