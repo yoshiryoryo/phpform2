@@ -69,7 +69,7 @@ session_destroy();
     }
 
     table {
-        background-color: white;
+        background-color: <div id="ffffff"></div>;
     }
 </style>
 

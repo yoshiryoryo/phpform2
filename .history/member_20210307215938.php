@@ -69,7 +69,7 @@ session_destroy();
     }
 
     table {
-        background-color: white;
+        
     }
 </style>
 

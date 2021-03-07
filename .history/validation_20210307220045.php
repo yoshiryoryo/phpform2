@@ -87,7 +87,7 @@ if (isset($_GET)) {
     }
 
     table {
-        background-color: white;
+        
     }
 
     .error_list {

@@ -86,9 +86,7 @@ if (isset($_GET)) {
         margin-top: 30px;
     }
 
-    table {
-        background-color: white;
-    }
+    
 
     .error_list {
         padding: 10px 30px;

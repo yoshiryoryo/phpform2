@@ -68,9 +68,7 @@ session_destroy();
         text-align: center;
     }
 
-    table {
-        background-color: white;
-    }
+    .table
 </style>
 
 
