@@ -39,5 +39,3 @@ header('Content-Disposition: attachment; filename=member.csv');
 
 // ファイル出力
 readfile($filepath);
-
-?>
