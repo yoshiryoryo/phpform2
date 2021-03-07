@@ -78,7 +78,7 @@ session_destroy();
         <button type="submit" class="btn-outline-dark">CSV出力</button>
     </form>
     <form action="index.php"　method="get">
-        <button type="submit" class="btn btn-secondary">戻る</button>
+        <button type="submit" class="">戻る</button>
     </form>
     <table class="table table-bordered">
     <tr>
