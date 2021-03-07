@@ -3,7 +3,7 @@ session_start();
 
 $session_id = session_id();
 
-if (isset($session_id)&isset($_SESSION['sei'])&isset($_SESSION['mei'])&isset($_SESSION['email'])) {
+if (isset($session_id)&isset($_SESSION['sei'])&isset($_SESSION['mei'])&isset()) {
 
     $sei = $_SESSION['sei'];
     $mei = $_SESSION['mei'];
