@@ -26,6 +26,16 @@ while (($data = fgetcsv($fp, 0, ",")) !== FALSE) {
   $csvData[] = $data;
 }
 fclose($fp);
+/////////////////////
+try {
+  $pdo = new PDO(
+    'mysql:dbname=form; host=phpform_db_1; port=3306; charset=utf8',
+    'root',
+    'root'
+  );
+} catch (PDOException $e) {
+  echo 'DB接続エラー: ' . $e->getMessage();
+}
 
 // データベースに接続
     // データベースのenvファイルを持ってくる
@@ -36,9 +46,9 @@ fclose($fp);
     $pdo = new PDO($dsn, $url['user'], $url['pass']);
 
     //  データの追加
-    //$sql_create = "INSERT INTO form (sei, mei, email, content) VALUES ('  $sei  ','  $mei  ','  $email  ',' $content ')";
-    //$stmt = $pdo->prepare($sql_create);
-    //$stmt->execute()
+    $sql_create = "INSERT INTO form (sei, mei, email, content) VALUES ('  $sei  ','  $mei  ','  $email  ',' $content ')";
+    $stmt = $pdo->prepare($sql_create);
+    $stmt->execute()
 
 var_dump($csvData);
 echo $_FILES['csvfile']['name'] . "の処理が完了しました。<br>";

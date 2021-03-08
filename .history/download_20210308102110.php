@@ -15,13 +15,11 @@ $stmt = $pdo->query($sql_read);
 $stmt->execute();
 
 //csvヘッダーを定義
-$csvHeader = ["id","セイ","メイ","email","補足"];
+$csvHeader = ["セイ","メイ","email","補足"];
 
 // SplFileObjectのインスタンスを生成
 $csvFile = new SplFileObject('member.csv', 'w');
 
-// csvヘッダーを挿入
-$csvFile->fputcsv($csvHeader);
 
 
 // while文データの数がわからないときの処理に便利

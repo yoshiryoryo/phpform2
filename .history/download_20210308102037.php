@@ -15,16 +15,21 @@ $stmt = $pdo->query($sql_read);
 $stmt->execute();
 
 //csvヘッダーを定義
-$csvHeader = ["id","セイ","メイ","email","補足"];
+$csvHeader = ["セイ","メイ","email","補足"];
+// 文字化けするなら文字コードをUTF-8にする
+// foreach( $csv_title as $key => $val ){
+//     $csvHeader[] = mb_convert_encoding($val, 'SJIS-win' , 'UTF-8');
+// }
+// SplFileObjectのインスタンスを生成
+$csvFile = new SplFileObject('member.csv', 'w');
+
+
 
 // SplFileObjectのインスタンスを生成
 $csvFile = new SplFileObject('member.csv', 'w');
 
-// csvヘッダーを挿入
-$csvFile->fputcsv($csvHeader);
-
-
 // while文データの数がわからないときの処理に便利
+// PDOのfetchモードで 
 while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
     $csvFile->fputcsv($row);
 }
