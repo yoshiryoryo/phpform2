@@ -21,7 +21,7 @@ $stmt->execute();
 $csvFile = new SplFileObject('member.csv', 'w');
 
 // csvヘッダーを挿入
-// $csvFile->fputcsv($csvHeader);
+$csvFile->fputcsv($csvHeader);
 
 
 // while文データの数がわからないときの処理に便利
