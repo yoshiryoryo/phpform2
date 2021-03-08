@@ -40,7 +40,6 @@ fclose($fp);
     //$stmt = $pdo->prepare($sql_create);
     //$stmt->execute()
 
-    
 var_dump($csvData[0]);
 echo $_FILES['csvfile']['name'] . "の処理が完了しました。<br>";
       //  データの追加
