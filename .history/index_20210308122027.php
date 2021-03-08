@@ -32,6 +32,7 @@
                 <h1>登録フォーム</h1>
                 <p>* は必須項目です</p>
                 <form action="validation.php" method="get">
+                    <input type="hidden" value="$token">
                     <div class="form-group">
                         <label for="sei">*姓(セイ):</label>
                         <input type="text" class="form-control" name="sei" id="sei" placeholder="全角カナで入力">
