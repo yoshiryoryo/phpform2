@@ -34,11 +34,6 @@ if (isset($_GET["token"]) && $_GET["token"] === $_SESSION['token']) {
         // 上記の処理を行ってから、member.phpに移動
         header("Location:http://phpform2.herokuapp.com/member.php");
         exit;
-
-    } else {
-        echo "不正なリクエストです";
-    }
-    
     } else {
         header("Location:http://phpform2.herokuapp.com/index.php");
         exit;
@@ -46,4 +41,6 @@ if (isset($_GET["token"]) && $_GET["token"] === $_SESSION['token']) {
     $_SESSION = [];
 
     session_destroy();
+} else {
+    echo "不正なリクエストです";
 }

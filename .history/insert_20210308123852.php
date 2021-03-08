@@ -46,4 +46,4 @@ if (isset($_GET["token"]) && $_GET["token"] === $_SESSION['token']) {
     $_SESSION = [];
 
     session_destroy();
-}
+
