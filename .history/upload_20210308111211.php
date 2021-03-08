@@ -59,6 +59,6 @@ fclose($fp);
         //ループのたびにsqlを実行する。
         $stmt->execute();
       }
-      $pdo->commit();
+      $dbh->commit();
       header("Location:http://phpform2.herokuapp.com/member.php");
       exit;

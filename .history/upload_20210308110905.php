@@ -41,8 +41,8 @@ fclose($fp);
     //$stmt->execute()
 
 
- // var_dump($csvData);
- // echo $_FILES['csvfile']['name'] . "の処理が完了しました。<br>";
+// var_dump($csvData);
+// echo $_FILES['csvfile']['name'] . "の処理が完了しました。<br>";
       //   データの追加
       $sql_create = "INSERT INTO form (sei, mei, email, content) VALUES (:sei , :mei , :email , :content)";
       $stmt = $pdo->prepare($sql_create);
@@ -50,15 +50,15 @@ fclose($fp);
       $stmt->bindParam(':mei', $mei, PDO::PARAM_STR);
       $stmt->bindParam(':email', $email, PDO::PARAM_STR);
       $stmt->bindParam(':content', $content, PDO::PARAM_STR);
-      $pdo->beginTransaction();
+      $dbh->beginTransaction();
       foreach ($csvData as $row) {
-        $sei = $row[1];
+        $sei   = $row[1];
         $mei = $row[2];
         $email = $row[3];
         $content = $row[4];
         //ループのたびにsqlを実行する。
         $stmt->execute();
       }
-      $pdo->commit();
+      $dbh->commit();
       header("Location:http://phpform2.herokuapp.com/member.php");
       exit;
