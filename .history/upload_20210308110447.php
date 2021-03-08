@@ -41,24 +41,24 @@ fclose($fp);
     //$stmt->execute()
 
 
-var_dump($csvData);
+var_dump($csvData[0][0]);
 echo $_FILES['csvfile']['name'] . "の処理が完了しました。<br>";
       //   データの追加
       $sql_create = "INSERT INTO form (sei, mei, email, content) VALUES (:sei , :mei , :email , :content)";
-      $stmt = $pdo->prepare($sql_create);
-      $stmt->bindParam(':sei', $sei, PDO::PARAM_STR);
-      $stmt->bindParam(':mei', $mei, PDO::PARAM_STR);
-      $stmt->bindParam(':email', $email, PDO::PARAM_STR);
-      $stmt->bindParam(':content', $content, PDO::PARAM_STR);
-      $dbh->beginTransaction();
-      foreach ($csvData as $row) {
-        $sei   = $row[1];
-        $mei = $row[2];
-        $email = $row[3];
-        $content = $row[4];
-        //ループのたびにsqlを実行する。
-        $stmt->execute();
-      }
-      $dbh->commit();
-      header("Location:http://phpform2.herokuapp.com/member.php");
-      exit;
+      // $stmt = $pdo->prepare($sql_create);
+      // $stmt->bindParam(':sei', $sei, PDO::PARAM_STR);
+      // $stmt->bindParam(':mei', $mei, PDO::PARAM_STR);
+      // $stmt->bindParam(':email', $email, PDO::PARAM_STR);
+      // $stmt->bindParam(':content', $content, PDO::PARAM_STR);
+      // $dbh->beginTransaction();
+      // foreach ($csvData as $row) {
+      //   $sei   = $row['sei'];
+      //   $mei = $row['mei'];
+      //   $email = $row['email'];
+      //   $content = $row['content'];
+      //   //ループのたびにsqlを実行する。
+      //   $stmt->execute();
+      // }
+      // $dbh->commit();
+      // header("Location:http://phpform2.herokuapp.com/member.php");
+      // exit;

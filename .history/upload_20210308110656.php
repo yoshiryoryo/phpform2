@@ -41,7 +41,7 @@ fclose($fp);
     //$stmt->execute()
 
 
-var_dump($csvData);
+var_dump($csvData[0]);
 echo $_FILES['csvfile']['name'] . "の処理が完了しました。<br>";
       //   データの追加
       $sql_create = "INSERT INTO form (sei, mei, email, content) VALUES (:sei , :mei , :email , :content)";
