@@ -38,7 +38,7 @@ if (isset($session_id) & isset($_SESSION['sei']) & isset($_SESSION['mei']) & iss
         exit;
     } else {
         echo "不正なリクエストです";
-        exit;
+        
     }
 } else {
     header("Location:http://phpform2.herokuapp.com/index.php");

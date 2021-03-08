@@ -8,7 +8,7 @@ session_start();
 // 正常な処理
 $session_id = session_id();
 
-if (isset($session_id) & isset($_SESSION['sei']) & isset($_SESSION['mei']) & isset($_SESSION['email'])) {
+if !(isset($session_id) & isset($_SESSION['sei']) & isset($_SESSION['mei']) & isset($_SESSION['email'])) {
 
     // 発行されたtokenの検証
     // 先に保存したトークンと送信されたトークンが一致するか確認します
@@ -38,7 +38,6 @@ if (isset($session_id) & isset($_SESSION['sei']) & isset($_SESSION['mei']) & iss
         exit;
     } else {
         echo "不正なリクエストです";
-        exit;
     }
 } else {
     header("Location:http://phpform2.herokuapp.com/index.php");
