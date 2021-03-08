@@ -102,7 +102,7 @@ if (isset($_GET)) {
                 <div class="col-xs-offset-4 col-xs-4">
                     <h1>確認画面</h1>
                     <form action="insert.php" method="get">
-                    <input type="hidden" value="<?= $token?>">
+                    <input type="hidden" value="<?= ">
                         <table class="table table-bordered">
                             <tr>
                                 <th>姓（セイ）:</th>
