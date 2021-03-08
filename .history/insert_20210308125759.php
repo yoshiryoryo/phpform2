@@ -40,7 +40,7 @@ if (isset($session_id) & isset($_SESSION['sei']) & isset($_SESSION['mei']) & iss
         echo "不正なリクエストです";
     }
 } else {
-     echo "セッションの有効期限切れです";
+     echo "セッションの有効期限切れです"；
 }
 
 $_SESSION = [];

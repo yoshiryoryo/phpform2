@@ -40,9 +40,9 @@ if (isset($session_id) & isset($_SESSION['sei']) & isset($_SESSION['mei']) & iss
         echo "不正なリクエストです";
     }
 } else {
-     echo "セッションの有効期限切れです";
+    header("Location:http://phpform2.herokuapp.com/index.php");
+    exit;
 }
-
 $_SESSION = [];
 
 session_destroy();
