@@ -5,14 +5,14 @@ session_start();
 // 先に保存したトークンと送信されたトークンが一致するか確認します
 
 
-// 正常な処理
-$session_id = session_id();
+    // 正常な処理
+    $session_id = session_id();
 
-if (isset($session_id) & isset($_SESSION['sei']) & isset($_SESSION['mei']) & isset($_SESSION['email'])) {
+    if (isset($session_id) & isset($_SESSION['sei']) & isset($_SESSION['mei']) & isset($_SESSION['email'])) {
 
-    // 発行されたtokenの検証
-    // 先に保存したトークンと送信されたトークンが一致するか確認します
-    if (isset($_GET["token"]) && $_GET["token"] === $_SESSION['token']) {
+        // 発行されたtokenの検証
+// 先に保存したトークンと送信されたトークンが一致するか確認します
+        if (isset($_GET["token"]) && $_GET["token"] === $_SESSION['token']) {
 
         $sei = $_SESSION['sei'];
         $mei = $_SESSION['mei'];
@@ -36,13 +36,16 @@ if (isset($session_id) & isset($_SESSION['sei']) & isset($_SESSION['mei']) & iss
         // 上記の処理を行ってから、member.phpに移動
         header("Location:http://phpform2.herokuapp.com/member.php");
         exit;
+
     } else {
         echo "不正なリクエストです";
     }
-} else {
-    header("Location:http://phpform2.herokuapp.com/index.php");
-    exit;
-}
-$_SESSION = [];
+    
+    } else {
+        header("Location:http://phpform2.herokuapp.com/index.php");
+        exit;
+    }
+    $_SESSION = [];
 
-session_destroy();
+    session_destroy();
+}
