@@ -1,5 +1,5 @@
 <?php
-// php.iniの設定を変更するのでsession開始前に上書き
+ini
 // セッションの有効期限を上書き
 ini_set('session.gc_maxlifetime', 10);
 // セッションデータを破棄するgcの動作確立を100パーセントにする
@@ -102,7 +102,6 @@ if (isset($_GET)) {
                 <div class="col-xs-offset-4 col-xs-4">
                     <h1>確認画面</h1>
                     <form action="insert.php" method="get">
-                    <input type="hidden" value="$token">
                         <table class="table table-bordered">
                             <tr>
                                 <th>姓（セイ）:</th>
@@ -143,6 +142,7 @@ if (isset($_GET)) {
                     <h1>登録フォーム</h1>
                     <p>* は必須項目です</p>
                     <form action="validation.php" method="get">
+                        <input type="hidden" value="$token">
                         <div class="form-group">
                             <label for="sei">*姓（セイ）:</label>
                             <input type="text" class="form-control" name="sei" id="sei">
